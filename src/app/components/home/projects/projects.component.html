@@ -1,0 +1,3 @@
+@for (project of projects; track project.id) {
+    <app-project [title]="project.title" [img]="project.img" [link]="project.link" [status]="project.status"/>
+}

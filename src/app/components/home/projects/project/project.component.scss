@@ -1,0 +1,124 @@
+@use "./../../../../../scss/abstract/" as *;
+
+.container {
+  position: relative;
+  & > * {
+    display: block;
+    padding: 0 2rem;
+    user-select: none;
+  }
+  a {
+    border-radius: 1rem;
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 2rem 2rem 0;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    &.inactive {
+      cursor: default;
+    }
+    img {
+      visibility: hidden;
+      max-width: 100%;
+    }
+    .frame {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s ease;
+    }
+  }
+  .icon {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    .svg-container {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      background-color: $colorWhite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.live {
+        display: none;
+      }
+    }
+  }
+
+  h2 {
+    margin-top: 1rem;
+    text-transform: capitalize;
+    font-size: $small;
+    .status {
+      color: $colorPrimary;
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media (min-width: 810px) {
+  .container {
+    a {
+      aspect-ratio: 383.68/293.08;
+      margin: 0 auto;
+      padding: 4px 4px 0px;
+    }
+
+    &:hover {
+      .icon,
+      h2 {
+        opacity: 100%;
+        transition: all 0.5s ease;
+      }
+      .icon {
+        top: 2.2rem;
+        right: .3rem;
+        transition: all 0.8s ease;
+      }
+    }
+    .frame:hover {
+      backdrop-filter: blur(10px);
+      transition: all 0.5s ease;
+    }
+    .icon {
+      opacity: 0;
+      top: 5rem;
+      right: 4rem;
+      transition: all 0.8s ease;
+
+      .svg-container {
+        &.live {
+          display: inline-block;
+        }
+        &.inactive {
+          background-color: $colorBlack;
+          svg {
+            stroke: $colorWhite;
+            stroke-width: 0.08rem;
+          }
+        }
+      }
+    }
+    h2 {
+      opacity: 0;
+      position: absolute;
+      top: 1.6rem;
+      left: 1.6rem;
+      color: $colorWhite;
+      font-size: $text;
+      transition: all 0.5s ease;
+
+      .status {
+        display: block;
+        margin: 1rem 0rem 0rem;
+      }
+    }
+  }
+}

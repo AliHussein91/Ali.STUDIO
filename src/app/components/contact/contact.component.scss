@@ -1,0 +1,21 @@
+@use '../../../scss/' as *;
+
+:host {
+  text-align: center;
+  font-size: $h2;
+  font-weight: 500;
+
+  a{
+    text-decoration: none;
+    color: $colorPrimary;
+    &:hover {
+        filter: brightness(140%);
+    }
+  }
+}
+
+@media(min-width: 820px){
+    :host{
+        font-size: $h1;
+    }
+}

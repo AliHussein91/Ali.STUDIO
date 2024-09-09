@@ -1,0 +1,44 @@
+@use "../../../../scss/abstract/" as *;
+
+:host {
+
+  width: 100%;
+
+}
+
+footer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 4rem 4rem 8rem;
+  font-size: $small;
+  user-select: none;
+  .links ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.5rem;
+    a {
+      text-decoration: none;
+      color: $colorBlack;
+      &:hover {
+        color: $colorPrimary;
+      }
+    }
+  }
+}
+
+@media (min-width: 810px) {
+    footer{
+
+        padding: 4rem;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        .developer {
+            margin-right: auto;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@use "../../../scss/abstract/" as *;
+
+:host {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  .hero {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    padding: 2rem;
+  }
+  h1,
+  .contact {
+    text-align: center;
+  }
+  h1 {
+    font-size: $h2;
+    font-weight: 500;
+  }
+  .expertise {
+    display: none;
+  }
+  .contact {
+    font-weight: 500;
+    height: 40vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    & > * {
+      font-size: $h3;
+    }
+    a {
+      text-decoration: none;
+      color: $colorPrimary;
+      &:hover {
+        filter: brightness(140%);
+      }
+    }
+  }
+}
+
+@media (min-width: 810px) {
+  :host {
+    .hero-wrapper {
+      height: 50vh;
+      display: flex;
+      flex: none;
+      flex-flow: column nowrap;
+      justify-content: center;
+      gap: 4rem;
+      padding: 4rem;
+      overflow: visible;
+      .hero {
+        height: fit-content;
+        max-width: 62rem;
+        padding: 0;
+        h1 {
+          font-size: $h1;
+          line-height: 6rem;
+        }
+      }
+      .expertise {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: $small;
+        line-height: 1.4rem;
+        flex-basis: 2rem;
+        ul {
+          list-style: none;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          li {
+            background-color: $colorSecondary;
+            padding: 1rem;
+            border-radius: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1196px) {
+  div.hero-wrapper div.hero {
+    max-width: 70rem !important;
+    h1.hero-text {
+      font-size: 72px;
+      line-height: 8.4rem;
+    }
+  }
+}
