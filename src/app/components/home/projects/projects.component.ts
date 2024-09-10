@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Project } from '../../../interfaces/project';
 import { ProjectsService } from '../../../services/projects.service';
-import { ProjectComponent } from "./project/project.component";
+import { ProjectComponent } from './project/project.component';
 
 @Component({
   selector: 'app-projects',
@@ -10,10 +10,13 @@ import { ProjectComponent } from "./project/project.component";
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
 
-  constructor(private projectService: ProjectsService) {
-    this.projects = this.projectService.projectsList;
+  constructor(private projectService: ProjectsService) {}
+  ngOnInit(): void {
+    this.projectService.getProjects().subscribe((projects: Project[]): void => {
+      this.projects = projects;
+    });
   }
 }

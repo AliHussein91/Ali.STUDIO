@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ExperiencesService } from '../../../services/experiences.service';
 import { Experience } from '../../../interfaces/experience';
 import { ExperienceItemComponent } from '../experience-item/experience-item.component';
@@ -8,12 +8,17 @@ import { ExperienceItemComponent } from '../experience-item/experience-item.comp
   standalone: true,
   imports: [ExperienceItemComponent],
   templateUrl: './experience-list.component.html',
-  styleUrl: './experience-list.component.scss'
+  styleUrl: './experience-list.component.scss',
 })
-export class ExperienceListComponent {
-  experienceList: Experience[] = []
+export class ExperienceListComponent implements OnInit {
+  experienceList: Experience[] = [];
 
-  constructor(private experiencesService: ExperiencesService){
-    this.experienceList = this.experiencesService.experiencelist
+  constructor(private experiencesService: ExperiencesService) {}
+  ngOnInit(): void {
+    this.experiencesService
+      .getExperiences()
+      .subscribe((experience: Experience[]): void => {
+        this.experienceList = experience;
+      });
   }
 }
