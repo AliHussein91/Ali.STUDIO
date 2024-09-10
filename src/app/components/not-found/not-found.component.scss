@@ -1,0 +1,56 @@
+@use "../../../scss/abstract/" as *;
+:host {
+  display: grid;
+  justify-items: center;
+  row-gap: 2rem;
+  h1 {
+    font-size: $h2;
+    font-weight: 500;
+    color: $colorPrimary;
+  }
+
+  h2 {
+    font-size: $h4;
+    font-weight: 500;
+  }
+
+  a {
+    text-decoration: none;
+    background-color: $colorSecondary;
+    padding: 1.4rem 2.9rem;
+    color: $colorBlack;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    font-size: $small;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: $colorBlack;
+      color: $colorWhite;
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+@media (min-width: 810px) {
+  :host {
+    h1 {
+      font-size: $h1;
+    }
+    h2 {
+      font-size: $h3;
+    }
+  }
+}
+
+@media (min-width: 1296px) {
+  :host {
+    h1 {
+      font-size: 72px;
+    }
+    h2 {
+      font-size: $h2;
+    }
+  }
+}

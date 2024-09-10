@@ -21,4 +21,18 @@ export const routes: Routes = [
         (r) => r.ProfileComponent
       ),
   },
+  {
+    path: 'projects/:id',
+    loadComponent: () =>
+      import('./components/project-page/project-page.component').then(
+        (r) => r.ProjectPageComponent
+      ),
+  },
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./components/not-found/not-found.component').then(
+        (r) => r.NotFoundComponent
+      ),
+  },
 ];

@@ -10,6 +10,22 @@ body {
   font-size: $text;
   max-width: 1400px;
   margin: 0 auto;
+}
 
+::-webkit-scrollbar {
+  width: 5px;
+}
 
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: $colorPrimary; 
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $colorBlack; 
 }

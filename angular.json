@@ -84,10 +84,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ohStudio:build:production"
+              "buildTarget": "aliStudio:build:production"
             },
             "development": {
-              "buildTarget": "ohStudio:build:development"
+              "buildTarget": "aliStudio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -95,7 +95,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ohStudio:build"
+            "buildTarget": "aliStudio:build"
           }
         },
         "test": {
