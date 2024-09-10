@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "server": "json-server db.json",
+    "server": "npx json-server db.json",
+    "dev": "ng serve --open && npx json-server db.json",
     "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
