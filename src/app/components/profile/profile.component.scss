@@ -1,0 +1,135 @@
+@use "../../../scss/abstract/" as *;
+
+:host {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  .greeting {
+    font-size: $h2;
+    font-weight: 500;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+  }
+  .my-picture {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 2rem;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-position: center center;
+      object-fit: cover;
+      image-rendering: auto;
+      border-radius: 1.5rem;
+      &.mobile {
+        display: none;
+      }
+    }
+  }
+  section {
+    padding: 8rem 4rem 4rem;
+    .section-title {
+      width: fit-content;
+      margin: 0 auto;
+      background-color: $colorSecondary;
+      padding: 0.8rem 1.2rem;
+      color: $colorBlack;
+      border-radius: 2rem;
+      margin-top: 2rem;
+      font-size: $small;
+      backdrop-filter: blur(10px);
+    }
+    h3 {
+      font-size: $h3;
+      font-weight: 500;
+    }
+    &.about {
+      padding: 6rem 2rem 2rem;
+      display: grid;
+      row-gap: 2rem;
+      p {
+        font-size: $h4;
+        font-weight: 500;
+        line-height: 3.4rem;
+      }
+    }
+    &.experience,
+    &.clients {
+      display: grid;
+      row-gap: 1rem;
+    }
+  }
+  app-experience-list {
+    padding: 2rem;
+  }
+  .contact {
+    font-weight: 500;
+    height: 40vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-size: $h3;
+    a {
+      text-decoration: none;
+      color: $colorPrimary;
+      &:hover {
+        filter: brightness(140%);
+      }
+    }
+  }
+}
+
+@media (min-width: 810px) {
+  :host {
+    .greeting {
+      font-size: $h1;
+      padding: 4rem;
+    }
+    .my-picture {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 4rem;
+      img {
+        aspect-ratio: 371/420;
+        &.mobile {
+          display: block;
+        }
+      }
+    }
+    section {
+      &.about {
+        padding: 14rem 4rem;
+        width: 100%;
+
+        p {
+          max-width: 60rem;
+          margin: 0 auto;
+          font-size: $h2;
+          line-height: 4.6rem;
+        }
+      }
+    }
+    app-experience-list {
+      padding: 4rem;
+    }
+  }
+  .contact > * {
+    font-size: $h2;
+  }
+}
+
+@media (min-width: 1196px) {
+  :host .greeting {
+    height: 70vh;
+    font-size: 72px;
+  }
+}

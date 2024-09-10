@@ -1,0 +1,32 @@
+@use "../../../../scss/abstract/" as *;
+
+:host {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 2.4rem;
+  padding: 4rem;
+  .experience-details {
+    display: grid;
+    gap: 1.2rem;
+    .duration,
+    .title {
+      font-size: $small;
+      color: $colorPrimary;
+    }
+    .partner {
+      font-size: $h5;
+      font-weight: 500;
+    }
+  }
+  h3 {
+    width: fit-content;
+    margin: 0 auto;
+    background-color: $colorSecondary;
+    padding: 0.8rem 1.2rem;
+    color: $colorBlack;
+    border-radius: 2rem;
+    font-size: $small;
+    backdrop-filter: blur(10px);
+  }
+}
