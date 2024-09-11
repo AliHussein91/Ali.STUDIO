@@ -22,11 +22,11 @@
       "link": "correlated",
       "status": "live",
       "details": {
-        "headline": "string",
-        "client": "string",
+        "headline": "From onboarding to automation.A seamless user journey.",
+        "client": "Correlated",
         "project": "string",
-        "studio": "string",
-        "overview": "string",
+        "studio": "Friendly Studio",
+        "overview": "I helped the Correlated team improve functionality across their platform and develop a series of new features, all backed up by a robust and distinct design system.",
         "imgs": [""]
       }
     },

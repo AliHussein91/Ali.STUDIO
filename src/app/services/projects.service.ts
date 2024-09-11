@@ -9,12 +9,17 @@ import { Observable } from 'rxjs';
 export class ProjectsService {
 
 
-  URL= "http://localhost:3000/projects"
+  URL = "http://localhost:3000/projects"
 
-  constructor(private http: HttpClient){
+  constructor(private http: HttpClient) {
   }
   getProjects(): Observable<Project[]> {
     const response = this.http.get<Project[]>(this.URL)
+    return response
+  }
+
+  getProjectByTitle(title: string): Observable<Project[]> {
+    const response = this.http.get<Project[]>(`${this.URL}?title=${title}`)
     return response
   }
 }
