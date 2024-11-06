@@ -12,7 +12,14 @@
         "project": "string",
         "studio": "string",
         "overview": "string",
-        "imgs": [""]
+        "imgs": {
+          "hero": "https://framerusercontent.com/images/QVKFKT3dyGxloXfzzpurVKNMM6M.jpg?scale-down-to=2048",
+          "set": [
+            "https://framerusercontent.com/images/68Iqel3D27Y4JufI8Uy5OvefWbc.jpg?scale-down-to=2048",
+            "https://framerusercontent.com/images/68Iqel3D27Y4JufI8Uy5OvefWbc.jpg?scale-down-to=2048",
+            "https://framerusercontent.com/images/QVKFKT3dyGxloXfzzpurVKNMM6M.jpg?scale-down-to=2048"
+          ]
+        }
       }
     },
     {
@@ -22,12 +29,19 @@
       "link": "correlated",
       "status": "live",
       "details": {
-        "headline": "From onboarding to automation.A seamless user journey.",
+        "headline": "From onboarding to automation.\nA seamless user journey.",
         "client": "Correlated",
         "project": "string",
         "studio": "Friendly Studio",
         "overview": "I helped the Correlated team improve functionality across their platform and develop a series of new features, all backed up by a robust and distinct design system.",
-        "imgs": [""]
+        "imgs": {
+          "hero": "https://framerusercontent.com/images/QVKFKT3dyGxloXfzzpurVKNMM6M.jpg?scale-down-to=2048",
+          "set": [
+            "https://framerusercontent.com/images/68Iqel3D27Y4JufI8Uy5OvefWbc.jpg?scale-down-to=2048",
+            "https://framerusercontent.com/images/68Iqel3D27Y4JufI8Uy5OvefWbc.jpg?scale-down-to=2048",
+            "https://framerusercontent.com/images/QVKFKT3dyGxloXfzzpurVKNMM6M.jpg?scale-down-to=2048"
+          ]
+        }
       }
     },
     {
@@ -42,7 +56,9 @@
         "project": "string",
         "studio": "string",
         "overview": "string",
-        "imgs": [""]
+        "imgs": {
+          "hero": ""
+        }
       }
     },
     {
@@ -57,7 +73,9 @@
         "project": "string",
         "studio": "string",
         "overview": "string",
-        "imgs": [""]
+        "imgs": {
+          "hero": ""
+        }
       }
     },
     {
@@ -72,7 +90,9 @@
         "project": "string",
         "studio": "string",
         "overview": "string",
-        "imgs": [""]
+        "imgs": {
+          "hero": ""
+        }
       }
     },
     {
@@ -87,7 +107,9 @@
         "project": "string",
         "studio": "string",
         "overview": "string",
-        "imgs": [""]
+        "imgs": {
+          "hero": ""
+        }
       }
     },
     {
@@ -102,7 +124,9 @@
         "project": "string",
         "studio": "string",
         "overview": "string",
-        "imgs": [""]
+        "imgs": {
+          "hero": ""
+        }
       }
     },
     {
@@ -117,7 +141,9 @@
         "project": "string",
         "studio": "string",
         "overview": "string",
-        "imgs": [""]
+        "imgs": {
+          "hero": ""
+        }
       }
     },
     {
@@ -132,7 +158,9 @@
         "project": "string",
         "studio": "string",
         "overview": "string",
-        "imgs": [""]
+        "imgs": {
+          "hero": ""
+        }
       }
     },
     {
@@ -147,7 +175,9 @@
         "project": "string",
         "studio": "string",
         "overview": "string",
-        "imgs": [""]
+        "imgs": {
+          "hero": ""
+        }
       }
     },
     {
@@ -162,7 +192,9 @@
         "project": "string",
         "studio": "string",
         "overview": "string",
-        "imgs": [""]
+        "imgs": {
+          "hero": ""
+        }
       }
     },
     {
@@ -177,7 +209,9 @@
         "project": "string",
         "studio": "string",
         "overview": "string",
-        "imgs": [""]
+        "imgs": {
+          "hero": ""
+        }
       }
     }
   ],

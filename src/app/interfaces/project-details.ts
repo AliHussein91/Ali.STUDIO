@@ -4,5 +4,7 @@ export interface ProjectDetails {
     project?: string | null,
     studio?: string | null,
     overview: string,
-    imgs: string[]
+    imgs: {
+        hero: 'string', "set": string[]
+    }
 }

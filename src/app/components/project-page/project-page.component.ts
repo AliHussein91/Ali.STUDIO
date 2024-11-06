@@ -18,7 +18,7 @@ export class ProjectPageComponent implements OnInit {
   }
   ngOnInit(): void {
     this.route.data.subscribe(({ project }) => {
-      this.project = project[0]
+      this.project = project[0] 
     })
   }
 }

@@ -6,7 +6,7 @@ import {
   RouterLinkActive,
   Event,
   NavigationEnd,
-  Params,
+
 } from '@angular/router';
 
 @Component({
@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit {
   router: Router = inject(Router);
 
   ngOnInit(): void {
+
     this.router.events.subscribe((routerEvent: Event) => {
       if (routerEvent instanceof NavigationEnd) {
         if (this.router.url.split('/')[1] === 'projects') {
@@ -28,7 +29,9 @@ export class HeaderComponent implements OnInit {
         } else {
           this.isProductPage = false;
         }
+
       }
+
     });
   }
 }

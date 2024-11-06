@@ -1,4 +1,42 @@
-<section class="project">
-    <h1 class="about-project">{{project.id}}</h1>
-    <p>{{title}}</p>
+<section class="project-main">
+  <div class="container">
+    <h1 class="headline">{{ project.details.headline }}</h1>
+    <h2 class="title">{{ project.title }}</h2>
+  </div>
+</section>
+<section class="project-details">
+  <img [src]="project.details.imgs.hero" alt="" />
+  <div class="project-info">
+    <div>
+      <p>Client</p>
+      <p>{{ project.details.client }}</p>
+    </div>
+    <div>
+      <p>Studio</p>
+      <p>{{ project.details.studio }}</p>
+    </div>
+    <div>
+      <p>Role</p>
+      <p>{{ project.details.client }}</p>
+    </div>
+    <div>
+      <p>Focus</p>
+      <p>{{ project.details.client }}</p>
+    </div>
+  </div>
+  <img [src]="project.details.imgs.set[0]" alt="" />
+  <div class="overview">
+    <div>
+      <p>Overview</p>
+      <p>{{ project.details.overview }}</p>
+    </div>
+  </div>
+  @if (project.details.imgs.set.length > 1) { @for (img of
+  project.details.imgs.set; track $index) {
+  <img [src]="img" alt="" />
+  } }
+</section>
+<section class="contact">
+  <h1>Let's work together.</h1>
+  <a href="mailto:ali.hussein@live.com">Get in touch.</a>
 </section>

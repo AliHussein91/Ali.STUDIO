@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 
@@ -12,5 +12,9 @@ import { HeaderComponent } from './components/shared/header/header.component';
 })
 export class AppComponent {
   title = 'Ali.STUDIO';
+
+  onActivate(event: Event) {
+    window.scroll(0, 0)
+  }
 }
 
